@@ -9656,5 +9656,15 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  font-family: "Poppins" sans-serif;
+}
+
+#logo {
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  width: 10%;
+}
 
 /*# sourceMappingURL=style.css.map */
