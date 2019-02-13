@@ -9688,6 +9688,7 @@ body {
 .outer-div {
   overflow: hidden;
 }
+
 .inner-div {
   background-size: cover;
   background-position: center;
@@ -9696,6 +9697,15 @@ body {
 
 .inner-div:hover {
   transform: scale(1.1);
+}
+
+#section3 {
+  background-image: url("../../public/img/cta-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
