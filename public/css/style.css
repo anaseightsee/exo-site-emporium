@@ -9708,4 +9708,15 @@ body {
   padding: 200px;
 }
 
+footer {
+  background-color: #212121;
+}
+
+.copyright {
+  background-color: black;
+}
+.copyright span {
+  color: #9B9B9B;
+}
+
 /*# sourceMappingURL=style.css.map */
