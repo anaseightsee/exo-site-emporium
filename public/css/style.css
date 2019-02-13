@@ -9678,4 +9678,24 @@ body {
   font-size: 50px;
 }
 
+.spanText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.outer-div {
+  overflow: hidden;
+}
+.inner-div {
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s ease;
+}
+
+.inner-div:hover {
+  transform: scale(1.1);
+}
+
 /*# sourceMappingURL=style.css.map */
