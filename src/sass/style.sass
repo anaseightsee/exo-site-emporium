@@ -4,16 +4,48 @@
 //     src: url(../../public/font/Poppins-Black.ttf)
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.css'
 
+$dark: #333
+$light: #fff
+
+
 body
     font-family : 'Poppins', sans-serif
-
+    margin: 0
 // HEADER START
+
+    // FIXED NAVBAR START
+
+.fixed-nav 
+    nav
+        position: fixed
+        top: 0
+        z-index: 1030
+        transition: 0s
+        background-color: inherit
+        width: 100%
+
+    // FIXED NAVBAR END
+header
+    nav
+        overflow: hidden
 
 #logo
     display: block
     margin: auto
     margin-top: 50px
-    width: 10%
+    width: 150px
+    font-weight: bold
+    text-decoration: none
+    font-size: 30px
+    font-weight: bolder
+
+.light
+    background-color: $light
+    border: 1px solid $dark
+
+.dark
+    background-color: $dark
+    border: 1px solid $light
 
 // HEADER END
 
@@ -21,11 +53,24 @@ body
 
 #section1
     background-color: #F3F3F3
+    overflow: hidden
     h1
-        font-size: 80px
+        // font-size: 80px
         font-weight: bold
-    h3
-        font-size: 50px
+        display: block
+
+// @media screen and (max-width: 576px)
+//     #section
+//         background-color: #F3F3F3
+//         h1
+//             font-size: 8px
+//             font-weight: bold
+//             display: block
+//         h3
+//             font-size: 50px
+                
+
+
 // SECTION1 END
 
 // SECTION2 START
@@ -36,6 +81,14 @@ body
     left: 50%
     transform: translate(-50%, -50%)
 
+.sales
+    float: left
+    width: 30px
+    height: 30px
+    line-height: 30px
+    border-radius: 50% 
+    font-size: 10px
+
 // zooming products
 
 .outer-div
@@ -45,7 +98,7 @@ body
     background-position: center
     transition: all 0.5s ease
 .inner-div:hover
-    transform: scale(1.1)
+    transform: scale(1.05)
 
 // SECTION2 END
 
@@ -54,16 +107,33 @@ body
 #section3
     background-image: url('../../public/img/cta-bg.jpg')
     background-position: center
-    background-size: cover
+    background-size: cover  
     background-repeat: no-repeat
     background-attachment: fixed
     padding: 200px
 
+@media screen and (max-width: 576px)
+    #section3
+        background-image: url('../../public/img/cta-bg.jpg')
+        background-position: center
+        background-size: cover  
+        background-repeat: no-repeat
+        background-attachment: fixed
+        padding: 100px
+        h1
+            font-size: 50%
 // SECTION3 END
 
 // SECTION4 START
 
-// elements to be added here in case of possible changes
+.icon
+    font-size: 30px
+    margin: 20px
+
+// .insideCol // => to be used used for other pc
+//     padding: 50px
+//     p
+//         font-size: 10%
 
 // SECTION4 END
 

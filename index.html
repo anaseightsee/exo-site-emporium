@@ -6,31 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="./public/css/style.css">
-    <title>Document</title>
+    <title>Emporium</title>
 </head>
 <body>
 
     <!-- HEADER START -->
-    <header>
-        <nav class="navbar-expand-md navbar-light">
-            <a href="#" title="logo"><img id="logo" src="./public/img/logo.png" alt=""></a>
-            <!-- <a class="navbar-brand" href="#" title="logo"><img id="logo" src="./public/img/logo.png" alt=""></a>  --> <!-- TO BE USED FOR RESPONSIVITT-->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <header class='bg-light'>
+        <nav class="navbar-expand-lg navbar-light align-items-center" id="navigation">
+            <span>
+                <a class="text-dark" href="#" id="logo">emporium.</a>
+            </span>
+            <button class="navbar-toggler m-3 p-2 float-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                <div class="navbar-nav m-5 text-uppercase">
-                    <li class="nav-item"><a class="mx-3 nav-link text-dark" href="#">Home</a></li>
-                    <li class="nav-item"><a class="mx-3 nav-link text-secondary" href="#">Product</a></li>
-                    <li class="nav-item"><a class="mx-3 nav-link text-secondary" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="mx-3 nav-link text-secondary" href="#">Elements</a></li>
-                    <li class="nav-item"><a class="mx-3 nav-link text-secondary" href="#">About</a></li>
-                    <li class="nav-item"><a class="mx-3 nav-link text-secondary" href="#">Contact</a></li>
+                <div class="navbar-nav m-5 text-uppercase text-center">
+                    <li class="nav-item"><a class="mx-3 nav-link text-dark active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">Product</a></li>
+                    <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">Elements</a></li>
+                    <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">About</a></li>
+                    <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">Contact</a></li>
                 </div>
                 <div class="themes">
-                    <button class="btn btn-light mx-2 border p-3"></button>
-                    <button class="btn btn-dark mx-2 p-3"></button>
-                    <button class="btn btn-dark">Connection</button>
+                    <button class="btn light mx-2 p-3"></button>
+                    <button class="btn dark mx-2 p-3"></button>
+                    <button class="btn float-right btn-dark">Connection</button>
                 </div>
             </div>
         </nav>
@@ -42,9 +43,9 @@
 
     <section id="section1">
         <div class="row no-gutters justify-content-center align-items-center">
-            <div class="col-md-4">
+            <div class="col-md-4 p-3">
                 <h3 class="text-danger">Shop at</h3>
-                <h1>emporium.</h1>
+                <h1 class="headingEmporium">emporium.</h1>
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of springs which I enjoy with my..</p>
                 <button class="btn btn-danger text-uppercase badge-pill p-3 px-5">sale items</button>
             </div>
@@ -59,40 +60,41 @@
 
     <section id="section2">
         <div class="row no-gutters text-center m-4">
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4">
                 <a href="">
-                <span class="spanText border-bottom p-3 text-light">Living Room</span></a>
+                <span class="spanText border-bottom text-light">Living Room</span></a>
                 <img class="w-75" src="./public/img/services/service-1.jpg" alt="">
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6 col-md-4">
                 <a href="">
-                <span class="spanText border-bottom p-3 text-light">Sale Items</span></a>
+                <span class="spanText border-bottom text-light">Sale Items</span></a>
                 <img class="w-75" src="./public/img/services/service-2.jpg" alt="">
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <a href="">
-                <span class="spanText border-bottom p-3 text-light">Clothes</span></a>
+                <span class="spanText border-bottom text-light">Clothes</span></a>
                 <img class="w-75" src="./public/img/services/slider-3.jpg" alt="">
             </div>
         </div>
         <div class="container">
             <h4 class="text-center mt-5 font-weight-bolder">Recent Products</h4>
             <div class="row no-gutters">
-                <div class="col-sm-4 outer-div p-3">
+                <div class="col-sm-6 col-md-4 outer-div p-3">
                     <img class="w-100 inner-div" src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
                     <div class="text-center mt-4">
                         <a class="font-weight-bolder text-dark" href="">Luxury Sofa</a>
                         <p class="text-danger font-weight-bold">$600.00</p>
                     </div>
                 </div>
-                <div class="col-sm-4 outer-div p-3">
+                <div class="col-sm-6 col-md-4 outer-div p-3">
                     <img class="w-100 inner-div" src="./public/img/products_mini/product-gloves.jpg" alt="">
-                    <div class="text-center mt-4">
+                    <div class="text-center mt-4 justify-content-center">
+                        <span class="bg-danger text-light sales">Sale!</span>
                         <a class="font-weight-bolder text-dark" href="">Leather Gloves</a>
                         <p class="text-danger font-weight-bold">$27.00</p>
                     </div>
                 </div>
-                <div class="col-sm-4 outer-div p-3">
+                <div class="col-md-4 outer-div p-3">
                     <img class="w-100 inner-div" src="./public/img/products_mini/product-cups.jpg" alt="">
                     <div class="text-center mt-4">
                         <a class="font-weight-bolder text-dark" href="">Colorful Bowl</a>
@@ -101,14 +103,14 @@
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-sm-4 outer-div p-3">
+                <div class="col-sm-6 col-md-4 outer-div p-3">
                     <img class="w-100 inner-div" src="./public/img/products_mini/product-bag.jpg" alt="">
                     <div class="text-center mt-4">
                         <a class="font-weight-bolder text-dark" href="">Women Bag</a>
                         <p class="text-danger font-weight-bold">$350.00</p>
                     </div>
                 </div>
-                <div class="col-sm-4 outer-div p-3">
+                <div class="col-sm-6 col-md-4 outer-div p-3">
                     <img class="w-100 inner-div" src="./public/img/products_mini/product-tshitr.jpg" alt="">
                     <div class="text-center mt-4">
                         <a class="font-weight-bolder text-dark" href="">Minimal t-shirt</a>
@@ -116,7 +118,7 @@
                     
                     </div>
                 </div>
-                <div class="col-sm-4 outer-div p-3">
+                <div class="col-md-4 outer-div p-3">
                     <img class="w-100 inner-div" src="./public/img/products_mini/product-plates.jpg" alt="">
                     <div class="text-center mt-4">
                         <a class="font-weight-bolder text-dark" href="">Plates Set</a>
@@ -125,21 +127,21 @@
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-sm-4 outer-div p-3">
+                <div class="col-sm-6 col-md-4 outer-div p-3">
                     <img class="w-100 inner-div" src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
                     <div class="text-center mt-4">
                         <a class="font-weight-bolder text-dark" href="">Modern Sofa</a>
                         <p class="text-danger font-weight-bold">$900.00</p>
                     </div>
                 </div>
-                <div class="col-sm-4 outer-div p-3">
+                <div class="col-sm-6 col-md-4 outer-div p-3">
                     <img class="w-100 inner-div" src="./public/img/products_mini/product-bed.jpg" alt="">
                     <div class="text-center mt-4">
                         <a class="font-weight-bolder text-dark" href="">Bed Linen</a>
                         <p class="text-danger font-weight-bold">$79.00</p>
                     </div>
                 </div>
-                <div class="col-sm-4 outer-div p-3">
+                <div class="col-md-4 outer-div p-3">
                     <img class="w-100 inner-div" src="./public/img/products_mini/product-shoes.jpg" alt="">
                     <div class="text-center mt-4">
                         <a class="font-weight-bolder text-dark" href="">Minimal Shoes</a>
@@ -159,7 +161,6 @@
         <button class="btn btn-danger badge-pill px-3">LEARN MORE</button>
     </section>
 
-   
     <!-- SECTION3 END -->
 
 
@@ -231,24 +232,30 @@
                 </a>
             </div>
         </div>
-        <div class="row no-gutters m-5 justify-content-center">
-            <div class="col-sm-3 text-center bg-light p-5 mx-5">
-                <i class="far fa-check-circle"></i>
-                <h4 class="font-weight-bolder text-uppercase">Trusted by 10,000+ customers</h4>
-                <p>Just write whatever you want here, because at the end, it doesn't really matter, you can talk about a lot of things in this paragraph, like for example, cats.. cats are the most majestic creatures ever, photogenics, and so fluffy, of course except the hairless ones</p>
-                <button class="btn btn-dark">LEARN MORE</button>
+        <div class="row m-5 justify-content-center">
+            <div class="col-lg-4 text-center">
+                <div class="p-5 insideCol bg-light">
+                    <i class="icon far fa-check-circle"></i>
+                    <h4 class="my-5 font-weight-bolder text-uppercase">Trusted by 10,000+ customers</h4>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <button class="my-5 p-4 btn btn-dark">LEARN MORE</button>
+                </div>
             </div>
-            <div class="col-sm-3 text-center bg-danger p-5 mx-5">
-                <i class="text-light fas fa-paper-plane"></i>
-                <h4 class="text-light font-weight-bolder text-uppercase">Very fast shipping</h4>
-                <p class="text-light">Just write whatever you want here, because at the end, it doesn't really matter, you can talk about a lot of things in this paragraph, like for example, cats.. cats are the most majestic creatures ever, photogenics, and so fluffy, of course except the hairless ones</p>
-                <button class="btn btn-light">LEARN MORE</button>
+            <div class="col-lg-4 text-center">
+                <div class="p-5 insideCol bg-danger">
+                    <i class="icon text-light fas fa-paper-plane"></i>
+                    <h4 class="my-5 text-light font-weight-bolder text-uppercase">Very fast shipping</h4>
+                    <p class="text-light">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <button class="my-5 p-4 btn btn-light">LEARN MORE</button>
+                </div>
             </div>
-            <div class="col-sm-3 text-center bg-light p-5 mx-5">
-                <i class="far fa-check-circle"></i>
-                <h4 class="font-weight-bolder text-uppercase">Trusted by 10,000+ customers</h4>
-                <p>Just write whatever you want here, because at the end, it doesn't really matter, you can talk about a lot of things in this paragraph, like for example, cats.. cats are the most majestic creatures ever, photogenics, and so fluffy, of course except the hairless ones</p>
-                <button class="btn btn-dark">LEARN MORE</button>
+            <div class="col-lg-4 text-center">
+                <div class="p-5 insideCol bg-light">
+                    <i class="icon far fa-check-circle"></i>
+                    <h4 class="my-5 font-weight-bolder text-uppercase">Trusted by 10,000+ customers</h4>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <button class="my-5 p-4 btn btn-dark">LEARN MORE</button>
+                </div>
             </div>
         </div>
     </section> 
