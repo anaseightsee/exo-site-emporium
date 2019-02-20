@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./public/css/style.css">
     <title>Emporium</title>
 </head>
-<body>
+<body> 
 
     <!-- HEADER START -->
-    <header class='bg-light'>
+    <header class='bg-light shadow'>
         <nav class="navbar-expand-lg navbar-light align-items-center" id="navigation">
             <span>
                 <a class="text-dark" href="#" id="logo">emporium.</a>
@@ -20,19 +20,96 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                <div class="navbar-nav m-5 text-uppercase text-center">
+                <ul class="navbar-nav m-5 text-uppercase text-center">
                     <li class="nav-item"><a class="mx-3 nav-link text-dark active" href="#">Home</a></li>
                     <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">Product</a></li>
                     <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">Blog</a></li>
                     <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">Elements</a></li>
                     <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">About</a></li>
                     <li class="nav-item"><a class="mx-3 nav-link text-secondary inactive" href="#">Contact</a></li>
-                </div>
-                <div class="themes">
+                </ul>
+                <!-- THEME BUTTONS AND CONNECTION -->
+                <div>
                     <button class="btn light mx-2 p-3"></button>
                     <button class="btn dark mx-2 p-3"></button>
-                    <button class="btn float-right btn-dark">Connection</button>
+                    <button class="btn mx-2 float-right boutonConnexion btn-dark" id="myBtn">Connexion</button>
+
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="container">
+                                <div class="row marginSignIn justify-content-center">
+                                    <div class="col-6 signIn">
+                                    <h3 class="panel-title">Please sign in</h3>
+                                        <div class="panel-body">
+                                            <form role="form">
+                                                <div class="row">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="Username">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                                        <div class="form-group">
+                                                        <input type="password" name="password_confirmation" class="form-control input-sm" placeholder="Password">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-danger badge-pill btn-block btnLogin mb-5">Login</button>
+                                                <a class="text-danger btn float-right clickHere" href="">Don't have an account? Click here to sign up!</a>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 signUp">
+                                        <div class="row centered-form">
+                                            <div class="divModal">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Please sign up</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <form role="form">
+                                                            <div class="row">
+                                                                 <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                    <div class="form-group">
+                                                                    <input type="text" name="first_name" class="form-control input-sm" placeholder="First Name">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                    <div class="form-group">
+                                                                    <input type="text" name="last_name" class="form-control input-sm" placeholder="Last Name">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                            <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                    <div class="form-group">
+                                                                    <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                    <div class="form-group">
+                                                                    <input type="password" name="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <input type="submit" value="Sign up" class="btn badge-pill btn-danger btn-block boutonRegister mb-5">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <!-- THEME BUTTONS AND CONNECTION -->
             </div>
         </nav>
     </header>
@@ -76,80 +153,159 @@
                 <img class="w-75" src="./public/img/services/slider-3.jpg" alt="">
             </div>
         </div>
+
+        <!-- PRODUCTS START -->
+
         <div class="container">
-            <h4 class="text-center mt-5 font-weight-bolder">Recent Products</h4>
+            <h4 class="text-center mt-5 font-weight-bolder text-dark textColor">Recent Products</h4>
             <div class="row no-gutters">
-                <div class="col-sm-6 col-md-4 outer-div p-3">
-                    <img class="w-100 inner-div" src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+                <div class="col-sm-6 col-md-4 outer-div px-3">
+                    <div class="imgOverlay">
+                        <img class="w-100 inner-div" src="./public/img/products_mini/product-luxry-sofa.jpg" alt="">
+                        <div class="overlay">
+                            <div><a class="text text-light" href=""><i class="far fa-eye"></i> View details</a></div>
+                        </div>
+                        <div class="overlay2">
+                            <div><a class="text text-light" href=""><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
+                        </div>
+                    </div>
                     <div class="text-center mt-4">
-                        <a class="font-weight-bolder text-dark" href="">Luxury Sofa</a>
+                        <a class="font-weight-bolder text-dark textColor" href="">Luxury Sofa</a>
                         <p class="text-danger font-weight-bold">$600.00</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 outer-div p-3">
-                    <img class="w-100 inner-div" src="./public/img/products_mini/product-gloves.jpg" alt="">
+                <div class="col-sm-6 col-md-4 outer-div px-3">
+                    <div class="imgOverlay">
+                        <img class="w-100 inner-div" src="./public/img/products_mini/product-gloves.jpg" alt="">
+                        <div class="overlay">
+                            <div><a class="text text-light" href=""><i class="far fa-eye"></i> View details</a></div>
+                        </div>
+                        <div class="overlay2">
+                            <div><a class="text text-light" href=""><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
+                        </div>
+                    </div>
                     <div class="text-center mt-4 justify-content-center">
                         <span class="bg-danger text-light sales">Sale!</span>
-                        <a class="font-weight-bolder text-dark" href="">Leather Gloves</a>
+                        <a class="font-weight-bolder text-dark textColor" href="">Leather Gloves</a>
                         <p class="text-danger font-weight-bold">$27.00</p>
                     </div>
                 </div>
-                <div class="col-md-4 outer-div p-3">
-                    <img class="w-100 inner-div" src="./public/img/products_mini/product-cups.jpg" alt="">
+                <div class="col-md-4 outer-div px-3">
+                    <div class="imgOverlay">
+                        <img class="w-100 inner-div" src="./public/img/products_mini/product-cups.jpg" alt="">
+                        <div class="overlay">
+                            <div><a class="text text-light" href=""><i class="far fa-eye"></i> View details</a></div>
+                        </div>
+                        <div class="overlay2">
+                            <div><a class="text text-light" href=""><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
+                        </div>
+                    </div>
                     <div class="text-center mt-4">
-                        <a class="font-weight-bolder text-dark" href="">Colorful Bowl</a>
+                        <a class="font-weight-bolder text-dark textColor" href="">Colorful Bowl</a>
                         <p class="text-danger font-weight-bold">$18.00</p>
                     </div>
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-sm-6 col-md-4 outer-div p-3">
-                    <img class="w-100 inner-div" src="./public/img/products_mini/product-bag.jpg" alt="">
+                <div class="col-sm-6 col-md-4 outer-div px-3">
+                    <div class="imgOverlay">
+                        <img class="w-100 inner-div" src="./public/img/products_mini/product-bag.jpg" alt="">
+                        <div class="overlay">
+                            <div><a class="text text-light" href=""><i class="far fa-eye"></i> View details</a></div>
+                        </div>
+                        <div class="overlay2">
+                            <div><a class="text text-light" href=""><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
+                        </div>
+                    </div>
                     <div class="text-center mt-4">
-                        <a class="font-weight-bolder text-dark" href="">Women Bag</a>
+                        <a class="font-weight-bolder text-dark textColor" href="">Women Bag</a>
+                        <span class="bg-danger text-light sales">Sale!</span>
                         <p class="text-danger font-weight-bold">$350.00</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 outer-div p-3">
-                    <img class="w-100 inner-div" src="./public/img/products_mini/product-tshitr.jpg" alt="">
+                <div class="col-sm-6 col-md-4 outer-div px-3">
+                    <div class="imgOverlay">
+                        <img class="w-100 inner-div" src="./public/img/products_mini/product-tshitr.jpg" alt="">
+                        <div class="overlay">
+                            <div><a class="text text-light" href=""><i class="far fa-eye"></i> View details</a></div>
+                        </div>
+                        <div class="overlay2">
+                            <div><a class="text text-light" href=""><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
+                        </div>
+                    </div>
                     <div class="text-center mt-4">
-                        <a class="font-weight-bolder text-dark" href="">Minimal t-shirt</a>
+                        <a class="font-weight-bolder text-dark textColor" href="">Minimal t-shirt</a>
                         <p class="text-danger font-weight-bold">$15.00</p>
                     
                     </div>
                 </div>
-                <div class="col-md-4 outer-div p-3">
-                    <img class="w-100 inner-div" src="./public/img/products_mini/product-plates.jpg" alt="">
+                <div class="col-md-4 outer-div px-3">
+                    <div class="imgOverlay">
+                        <img class="w-100 inner-div" src="./public/img/products_mini/product-plates.jpg" alt="">
+                        <div class="overlay">
+                            <div><a class="text text-light" href=""><i class="far fa-eye"></i> View details</a></div>
+                        </div>
+                        <div class="overlay2">
+                            <div><a class="text text-light" href=""><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
+                        </div>
+                    </div>
                     <div class="text-center mt-4">
-                        <a class="font-weight-bolder text-dark" href="">Plates Set</a>
+                        <a class="font-weight-bolder text-dark textColor" href="">Plates Set</a>
                         <p class="text-danger font-weight-bold">$30.00</p>
                     </div>
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-sm-6 col-md-4 outer-div p-3">
-                    <img class="w-100 inner-div" src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
+                <div class="col-sm-6 col-md-4 outer-div px-3">
+                    <div class="imgOverlay">
+                        <img class="w-100 inner-div" src="./public/img/products_mini/product-modern-sofa.jpg" alt="">
+                        <div class="overlay">
+                            <div><a class="text text-light" href=""><i class="far fa-eye"></i> View details</a></div>
+                        </div>
+                        <div class="overlay2">
+                            <div><a class="text text-light" href=""><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
+                        </div>
+                    </div>
                     <div class="text-center mt-4">
-                        <a class="font-weight-bolder text-dark" href="">Modern Sofa</a>
+                        <a class="font-weight-bolder text-dark textColor" href="">Modern Sofa</a>
                         <p class="text-danger font-weight-bold">$900.00</p>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 outer-div p-3">
-                    <img class="w-100 inner-div" src="./public/img/products_mini/product-bed.jpg" alt="">
+                <div class="col-sm-6 col-md-4 outer-div px-3">
+                    <div class="imgOverlay">
+                        <img class="w-100 inner-div" src="./public/img/products_mini/product-bed.jpg" alt="">
+                        <div class="overlay">
+                            <div><a class="text text-light" href=""><i class="far fa-eye"></i> View details</a></div>
+                        </div>
+                        <div class="overlay2">
+                            <div><a class="text text-light" href=""><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
+                        </div>
+                    </div>
                     <div class="text-center mt-4">
-                        <a class="font-weight-bolder text-dark" href="">Bed Linen</a>
+                        <a class="font-weight-bolder text-dark textColor" href="">Bed Linen</a>
                         <p class="text-danger font-weight-bold">$79.00</p>
                     </div>
                 </div>
-                <div class="col-md-4 outer-div p-3">
-                    <img class="w-100 inner-div" src="./public/img/products_mini/product-shoes.jpg" alt="">
+                <div class="col-md-4 outer-div px-3">
+                    <div class="imgOverlay">
+                        <img class="w-100 inner-div" src="./public/img/products_mini/product-shoes.jpg" alt="">
+                        <div class="overlay">
+                            <div><a class="text text-light" href=""><i class="far fa-eye"></i>View details</a></div>
+                        </div>
+                        <div class="overlay2">
+                            <div><a class="text text-light" href=""><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
+                        </div>
+                    </div>
                     <div class="text-center mt-4">
-                        <a class="font-weight-bolder text-dark" href="">Minimal Shoes</a>
+                        <a class="font-weight-bolder text-dark textColor" href="">Minimal Shoes</a>
                         <p class="text-danger font-weight-bold">$60.00</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- PRODUCTS END -->
+
     </section>
 
     <!-- SECTION2 END -->
@@ -167,8 +323,11 @@
     <!-- SECTION4 START -->
 
     <section id="section4">
+
+        <!-- CAROUSEL START -->
+
         <div>
-            <h5 class="text-center font-weight-bolder m-5">Hot Fashion Products</h5>
+            <h5 class="text-center font-weight-bolder m-5 text-dark textColor">Hot Fashion Products</h5>
             <div id="gallery" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -176,28 +335,28 @@
                             <div class="col-sm-2 outer-div p-3">
                                 <img src="./public/img/products/product-tshitr-white-700x500.jpg" alt="" class="w-100 inner-div">
                                 <div class="text-center mt-4">
-                                    <a href="" class="font-weight-bolder text-dark">White T-Shirt</a>
+                                    <a href="" class="font-weight-bolder text-dark textColor">White T-Shirt</a>
                                     <p class="text-danger font-weight-bolder">$23.00</p>
                                 </div>
                             </div>
                             <div class="col-sm-2 outer-div p-3">
                                 <img src="./public/img/products/product-bag-2-700x500.jpg" alt="" class="w-100 inner-div">
                                 <div class="text-center mt-4">
-                                    <a href="" class="font-weight-bolder text-dark">Red Bag</a>
+                                    <a href="" class="font-weight-bolder text-dark textColor">Red Bag</a>
                                     <p class="text-danger font-weight-bolder">$450.00</p>
                                 </div>
                             </div>
                             <div class="col-sm-2 outer-div p-3">
                                 <img src="./public/img/products/product-jacket-700x500.jpg" alt="" class="w-100 inner-div">
                                 <div class="text-center mt-4">
-                                    <a href="" class="font-weight-bolder text-dark">Sporty Jacket</a>
+                                    <a href="" class="font-weight-bolder text-dark textColor">Sporty Jacket</a>
                                     <p class="text-danger font-weight-bolder">$40.00</p>
                                 </div>
                             </div>
                             <div class="col-sm-2 outer-div p-3">
                                 <img src="./public/img/products/product-shoes-700x500.jpg" alt="" class="w-100 inner-div">
                                 <div class="text-center mt-4">
-                                    <a href="" class="font-weight-bolder text-dark">Minimal Shoes</a>
+                                    <a href="" class="font-weight-bolder text-dark textColor">Minimal Shoes</a>
                                     <p class="text-danger font-weight-bolder">$60.00</p>
                                 </div>
                             </div>
@@ -208,17 +367,31 @@
                             <div class="col-sm-2 outer-div p-3">
                                 <img src="./public/img/products/product-tshitr-700x500.jpg" alt="" class="w-100 inner-div">
                                 <div class="text-center mt-4">
-                                    <a href="" class="font-weight-bolder text-dark">Minimal T-Shirt</a>
+                                    <a href="" class="font-weight-bolder text-dark textColor">Minimal T-Shirt</a>
                                     <p class="text-danger font-weight-bolder">$15.00</p>
                                 </div>
                             </div>
                             <div class="col-sm-2 outer-div p-3">
                                 <img src="./public/img/products/product-bag-700x500.jpg" alt="" class="w-100 inner-div">
                                 <div class="text-center mt-4">
-                                    <a href="" class="font-weight-bolder text-dark">Women Bag</a>
+                                    <a href="" class="font-weight-bolder text-dark textColor">Women Bag</a>
                                     <p class="text-danger font-weight-bolder">$350.00</p>
                                 </div>
                             </div>
+                            <div class="col-sm-2 outer-div p-3">
+                                    <img src="./public/img/products/product-bag-2-700x500.jpg" alt="" class="w-100 inner-div">
+                                    <div class="text-center mt-4">
+                                        <a href="" class="font-weight-bolder text-dark textColor">Red Bag</a>
+                                        <p class="text-danger font-weight-bolder">$450.00</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 outer-div p-3">
+                                    <img src="./public/img/products/product-tshitr-white-700x500.jpg" alt="" class="w-100 inner-div">
+                                    <div class="text-center mt-4">
+                                        <a href="" class="font-weight-bolder text-dark textColor">Long Sleeve Shirt</a>
+                                        <p class="text-danger font-weight-bolder">$30.00</p>
+                                    </div>
+                                </div>
                         </div>
                     </div>
                 </div>
@@ -232,6 +405,9 @@
                 </a>
             </div>
         </div>
+
+        <!-- CAROUSEL END -->
+        
         <div class="row m-5 justify-content-center">
             <div class="col-lg-4 text-center">
                 <div class="p-5 insideCol bg-light">
@@ -266,11 +442,11 @@
 
     <footer>
         <div class="row no-gutters justify-content-center text-light">
-            <div class="col-sm-3 mt-5 px-5">
+            <div class="col-lg-3 mt-5 px-5">
                 <h4>ABOUT US</h4>
                 <p class="text-secondary">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of</p>
             </div>
-            <div class="col-sm-3 mt-5 px-5 border-left m-5">
+            <div class="col-lg-3 mt-5 px-5 border-left border-right m-5">
                 <h4>RECENT POSTS</h4>
                 <ul class="list-unstyled">
                     <li class="border-bottom text-danger mb-3">
@@ -287,7 +463,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-3 mt-5 px-5 border-left border-secondary">
+            <div class="col-lg-3 mt-5 mb-3 px-5">
                 <h4>TAG CLOUDS</h4>
                 <button class="btn text-light mx-2 mt-2 border border-secondary">Business</button>
                 <button class="btn text-light mx-2 mt-2 border border-secondary">Conference</button>

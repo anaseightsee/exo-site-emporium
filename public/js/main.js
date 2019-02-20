@@ -1,4 +1,7 @@
 
+const nav = document.getElementById('navigation');
+const navTop = nav.offsetTop;
+
 // THEME CHANGE START
 let logo = document.getElementById('logo');
 let activeNavbar = document.getElementsByClassName('active')[0];
@@ -9,13 +12,16 @@ let body = document.getElementsByTagName('body')[0]
 
 function darkTheme(){
     if (blckBtn) {
-        body.style.backgroundColor = 'black'
-        header.style.backgroundColor = 'black' 
+        body.style.backgroundColor = '#212121'
+        // header.style.backgroundColor = 'black' 
         header.classList.remove('bg-light')
+        header.classList.add('bg-dark')
         logo.classList.add('text-light')
         logo.classList.remove('text-dark')
         activeNavbar.classList.add('text-light')
         activeNavbar.classList.remove('text-dark')
+        nav.classList.remove('navbar-light')
+        nav.classList.add('navbar-dark')
     }
 }
 blckBtn.addEventListener('click', darkTheme)
@@ -30,14 +36,27 @@ function darkInactive(){
 
 blckBtn.addEventListener('click', darkInactive)
 
+function darkText(){
+    let textThemeChange = document.querySelectorAll('.textColor')
+    for (i = 0; i < textThemeChange.length; i++){
+        textThemeChange[i].classList.add('text-light')
+        textThemeChange[i].classList.remove('text-dark')
+    }
+}
+
+blckBtn.addEventListener('click', darkText)
+
 function lightTheme(){
     if (whtBtn) {
         body.style.backgroundColor = 'white'
-        header.style.backgroundColor = 'white'
+        header.classList.add('bg-light')
+        header.classList.remove('bg-dark')
         logo.classList.add('text-dark')
         logo.classList.remove('text-light')
         activeNavbar.classList.add('text-dark')
         activeNavbar.classList.remove('text-light')
+        nav.classList.remove('navbar-dark')
+        nav.classList.add('navbar-light')
     }
 }
 
@@ -52,11 +71,21 @@ function lightInactive(){
 }
 whtBtn.addEventListener('click', lightInactive)
 
+function lightText(){
+    let textThemeChange = document.querySelectorAll('.textColor')
+    for (i = 0; i < textThemeChange.length; i++){
+        textThemeChange[i].classList.remove('text-light')
+        textThemeChange[i].classList.add('text-dark')
+    }
+}
+
+whtBtn.addEventListener('click', lightText)
+
 // THEME CHANGE END
 
 // STICKY NAVBAR START
-const nav = document.getElementById('navigation');
-const navTop = nav.offsetTop;
+
+    // elements grabbed in the top lines
 
 function stickyNavigation() {
     console.log('navTop = ' + navTop);
@@ -79,3 +108,41 @@ function stickyNavigation() {
 window.addEventListener('scroll', stickyNavigation);
 
 // STICKY NAVBAR END
+
+// CONNECTION START
+
+let modal = document.getElementById('myModal');
+let btn = document.getElementById("myBtn");
+let span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+let signup = document.getElementsByClassName('signUp')[0]
+let signin = document.getElementsByClassName('signIn')[0];
+let clickHere = document.getElementsByClassName('clickHere')[0];
+
+signup.style.display = 'none'
+
+function clickToSignUp(){
+    if(clickHere){
+        signin.style.display = 'none'
+        signup.style.display = ''
+        event.preventDefault()
+    }
+}
+
+clickHere.addEventListener('click', clickToSignUp)
+
+// CONNECTION END
