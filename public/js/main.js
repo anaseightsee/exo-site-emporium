@@ -96,10 +96,10 @@ function stickyNavigation() {
     if (window.scrollY >= navTop) {
         document.body.style.paddingTop = nav.offsetHeight + 'px';
         document.body.classList.add('fixed-nav');
-        logo.style.display = ''
+        // logo.style.display = ''
         logo.classList.add('float-left')
     } else {
-        document.body.style.paddingTop = 0;
+        // document.body.style.paddingTop = 0;
         document.body.classList.remove('fixed-nav');
         logo.classList.remove('float-left')
     }
@@ -135,14 +135,37 @@ let clickHere = document.getElementsByClassName('clickHere')[0];
 
 signup.style.display = 'none'
 
-function clickToSignUp(){
+function clickToSignUp(event){
     if(clickHere){
         signin.style.display = 'none'
         signup.style.display = ''
         event.preventDefault()
+    } else {
+        signin.style.display = ''
+        signup.style.display = 'none'
     }
 }
 
 clickHere.addEventListener('click', clickToSignUp)
 
 // CONNECTION END
+
+// CAROUSEL START
+
+let slideDiv = document.getElementsByClassName('slide')[0]
+let btnCarousel = document.querySelectorAll('#section4 a')
+
+
+function slide(event) {
+    let pos = event.currentTarget.dataset.position;
+    slideDiv.style.transform = 'translateX(' + -13 * pos + '%)'
+    slideDiv.style.transition = 'all 1s ease'
+    event.preventDefault()
+}
+
+btnCarousel[0].addEventListener('click', slide)
+btnCarousel[1].addEventListener('click', slide)
+btnCarousel[2].addEventListener('click', slide)
+btnCarousel[3].addEventListener('click', slide)
+
+// CAROUSEL END

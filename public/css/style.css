@@ -9718,10 +9718,10 @@ header nav {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 10px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
 }
 
 .close {
@@ -9762,6 +9762,7 @@ header nav {
 }
 
 .sales {
+  text-align: center;
   float: left;
   width: 30px;
   height: 30px;
@@ -9865,6 +9866,20 @@ header nav {
 .icon {
   font-size: 30px;
   margin: 20px;
+}
+
+#section4 .col {
+  max-width: 280px !important;
+}
+#section4 .carousel {
+  overflow: hidden;
+}
+#section4 .carousel .slide {
+  width: 2100px;
+}
+#section4 .carousel img {
+  width: auto;
+  height: 190px;
 }
 
 footer {
