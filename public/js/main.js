@@ -13,7 +13,6 @@ let body = document.getElementsByTagName('body')[0]
 function darkTheme(){
     if (blckBtn) {
         body.style.backgroundColor = '#212121'
-        // header.style.backgroundColor = 'black' 
         header.classList.remove('bg-light')
         header.classList.add('bg-dark')
         logo.classList.add('text-light')
